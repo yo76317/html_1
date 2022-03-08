@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="" rel="stylesheet" type="text/css">
+    <style>
+        .div1 {
+            width: 600px;
+            height: 600px;
+            margin: 30px auto;
+            border: 1px solid cornflowerblue;
+            text-align: center;
+            padding: 20px 0px 0px 0px;
+        }
+
+        .div2 {
+            width: 1200px;
+            margin: 30px auto;
+            border: 1px solid cornflowerblue;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .div3 {
+            width: 600px;
+            margin: 30px auto;
+            border: 1px solid cornflowerblue;
+            padding: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div style="display: flex">
+        <!-- 第一張圖 -->
+        <div class="div1" id="top1">
+            <p> 半形空格 &ensp; 半形空格</p>
+            <img src="./img/5.jpg" width="400" height="500" alt="sky">
+        </div>
+        <!-- 第二張圖 -->
+        <div class="div1">
+            <img src="./img/7.jpg" width="400" height="500" alt="Planets" usemap="#img_map" id="img_map" />
+            <map name="img_map" id="img_map">
+                <area href="./img/A.jpg" shape="rect" coords="110,229,143,303"></a>
+                <area href="./img/B.jpg" shape="rect" coords="129,161,10"></a>
+                <area href="./img/C.jpg" shape="rect" coords="180,139,14"></a>
+            </map>
+            <div>
+                <a href="https://www.google.com" target="_blank" rel="prev">上一篇</a>
+                <a href="https://www.google.com" target="_blank">本篇</a>
+                <a href="./img/5.jpg" download="./img/5.jpg">下載圖片</a>
+                <a href="#top1">top</a>
+            </div>
+        </div>
+        <!-- 第三張圖 -->
+        <div class="div1">
+            <a href="http://www.googole.com" target="_blank">
+                <img src="./img/6.jpg" width="400" height="500">
+            </a>
+            <div style="display:flex ; justify-content:space-around ; text-align: center;">
+                <p>
+                    <a href="mailto:yo76317@yahoo.com.tw">E-mail</a>
+                </p>
+                <p>
+                    <a href="tel:+912345678">tel</a>
+                </p>
+                <p>
+                    <a href="ftp://220.128.133.15/s1100402/">FTP</a>
+                </p>
+                <p>
+                    <a href="https://www.yahoo.com.tw" ping="https://www.fooish.com/trackpings">ping</a>
+                </p>
+            </div>
+        </div>
+    </div>
+    <!-- 響應式圖片 -->
+    <div class="div2">
+        <div>響應式圖片</div>
+        <picture>
+            <source srcset="./img/6.jpg" media="(min-width:1000px)" width="1200" height="500">
+            <img src="./img/5.jpg">
+            <source srcset="./img/5.jpg" media="(min-width:700px)" width="1200" height="500">
+            <img src="./img/7.jpg">
+        </picture>
+    </div>
+    <!-- 序列 三大值 -->
+    <div style="display: flex;">
+        <div class="div3">
+            <p> 半形空格 &ensp; 半形空格</p>
+
+            <ol>
+                <li>1</li>
+                <li>2</li>
+                <li>3</li>
+            </ol>
+
+            <ul>
+                <li>1</li>
+                <li>2</li>
+                <li>3</li>
+            </ul>
+
+            <dl>
+                <dt>head</dt>
+                <dd>縮排</dd>
+                <dt>head</dt>
+                <dd>縮排</dd>
+            </dl>
+
+            <ol>
+                <li>有序</li>
+                <li>有序
+                    <ul>
+                        <li>無序</li>
+                        <li>無序</li>
+                    </ul>
+                </li>
+                <li>有序</li>
+            </ol>
+        </div>
+
+
+        <div class="div3">
+            <!-- 表格 table -->
+            <table style="border:1px solid black;margin:20px;" rules="all">
+                <tr>
+                    <td>內容1</td>
+                    <td>內容2</td>
+                    <td>內容3</td>
+                    <td>內容4</td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>2</td>
+                    <td>3</td>
+                    <td>4</td>
+                </tr>
+            </table>
+
+            <table style="border:1px solid black;margin:20px; " rules="all">
+                <tr>
+                    <th>標題1</th>
+                    <th>標題2</th>
+                    <th>標題3</th>
+                    <th>標題4</th>
+                </tr>
+                <tr>
+                    <td>內容1</td>
+                    <td>內容2</td>
+                    <td>內容3</td>
+                    <td>內容4</td>
+                </tr>
+            </table>
+            <table style="border:1px solid black;margin:20px; " rules="all">
+                <tr>
+                    <th>標題1</th>
+                    <th>標題2</th>
+                    <th>標題3</th>
+                    <th>標題4</th>
+                </tr>
+                <tr>
+                    <td rowspan="2">第一行 內容1</td>
+                    <td>第一行 內容2</td>
+                    <td>第一行 內容3</td>
+                    <td>第一行 內容4</td>
+                </tr>
+                <tr>
+                    <td>第二行 內容1</td>
+                    <td>第二行 內容2</td>
+                    <td>第二行 內容3</td>
+                    <td>第二行 內容4</td>
+                </tr>
+            </table>
+
+            <table style="border:1px solid black;margin:20px; " rules="all">
+                <tr>
+                    <th>標題1</th>
+                    <th>標題2</th>
+                    <th>標題3</th>
+                    <th>標題4</th>
+                </tr>
+                <tr>
+                    <td rowspan="0">第一行 內容1</td>
+                    <td>第一行 內容2</td>
+                    <td>第一行 內容3</td>
+                    <td>第一行 內容4</td>
+                </tr>
+                <tr>
+                    <td>第二行 內容1</td>
+                    <td>第二行 內容2</td>
+                    <td>第二行 內容3</td>
+                    <td>第二行 內容4</td>
+                </tr>
+                <tr>
+                    <td>第三行 內容1</td>
+                    <td>第二行 內容2</td>
+                    <td>第二行 內容3</td>
+                    <td>第二行 內容4</td>
+                </tr>
+            </table>
+
+            <table style="border:1px solid black;margin:20px; " rules="all">
+                <tr>
+                    <th>標題1</th>
+                    <th>標題2</th>
+                    <th>標題3</th>
+                    <th>標題4</th>
+                </tr>
+                <tr>
+                    <td colspan="2">第一行 內容1</td>
+                    <td>第一行 內容2</td>
+                    <td>第一行 內容3</td>
+                    <td>第一行 內容4</td>
+                </tr>
+                <tr>
+                    <td>第二行 內容1</td>
+                    <td>第二行 內容2</td>
+                    <td>第二行 內容3</td>
+                    <td>第二行 內容4</td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="div3">
+            <!-- 表格區塊 -->
+
+            <table style="border:1px solid black;margin:20px; " rules="all">
+                <thead>
+                    <tr>
+                        <th>項目</th>
+                        <th>十二期</th>
+                        <th>二十四期</th>
+                        <th>三十六期</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>iPhone 11</td>
+                        <td>30000</td>
+                        <td>20000</td>
+                        <td>10000</td>
+                    </tr>
+                    <tr>
+                        <td>AirPods</td>
+                        <td>12000</td>
+                        <td>9000</td>
+                        <td>6000</td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td>總金額</td>
+                        <td>42000</td>
+                        <td>29000</td>
+                        <td>16000</td>
+                    </tr>
+                </tfoot>
+            </table>
+
+            <!-- 表格大標題 -->
+            <table style="border:1px solid black;margin:20px;" rules="all">
+                <caption>大標題</caption>
+                <tr>
+                    <td>內容1</td>
+                    <td>內容2</td>
+                    <td>內容3</td>
+                    <td>內容4</td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>2</td>
+                    <td>3</td>
+                    <td>4</td>
+                </tr>
+            </table>
+
+            <!-- 表格直行分組 col colgroup -->
+            <table style="border:1px solid black;margin:20px;" rules="all">
+                <caption>大標題</caption>
+                <colgroup style="background-color: aqua;" span="2"></colgroup>
+                <colgroup style="background-color: brown;"></colgroup>
+                <tr>
+                    <th>標題1</th>
+                    <th>標題2</th>
+                    <th>標題3</th>
+                </tr>
+                <tr>
+                    <td>內容1</td>
+                    <td>內容2</td>
+                    <td>內容3</td>
+                </tr>
+                <tr>
+                    <td>內容1</td>
+                    <td>內容2</td>
+                    <td>內容3</td>
+                </tr>
+            </table>
+
+            <table style="border:1px solid black;margin:20px;" rules="all">
+                <caption>大標題</caption>
+                <colgroup>
+                    <col style="background-color: aqua;" span="2">
+                    <col style="background-color: brown" span="1">
+                </colgroup>
+                <tr>
+                    <th>標題1</th>
+                    <th>標題2</th>
+                    <th>標題3</th>
+                </tr>
+                <tr>
+                    <td>內容1</td>
+                    <td>內容2</td>
+                    <td>內容3</td>
+                </tr>
+                <tr>
+                    <td>內容1</td>
+                    <td>內容2</td>
+                    <td>內容3</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <!-- 第四部份 表單 -->
+    <div class="div3">
+        <form action="#" method="get">
+            <p>
+                <input type="text" maxlength="4" size="10">
+            </p>
+
+            <p>
+                <input type="checkbox" value="html" name="A">選項 1
+                <input type="checkbox" value="CSS" name="B" checked>選項 2
+                <input type="checkbox" value="JS" name="C">選項 3
+            </p>
+
+            <p>
+                <input type="radio" value="red" name="A">
+                <input type="radio" value="blue" name="A" checked>
+                <input type="radio" value="green" name="A">
+            </p>
+
+            <input type="hidden">
+
+            <p>
+                <input type="submit" value="送出">
+                <input type="reset" value="重置">
+            </p>
+
+            <p>
+                <input type="image" src="img/a1-3.jpg" alt="鞋子" width="200px" height="200px">
+            </p>
+
+        </form>
+
+
+
+    </div>
+</body>
+
+</html>
