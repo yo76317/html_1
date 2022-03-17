@@ -31,6 +31,31 @@
             border: 1px solid cornflowerblue;
             padding: 20px;
         }
+
+        div {
+            margin-bottom: 10px;
+            position: relative;
+        }
+
+        input[type="number"] {
+            width: 100px;
+        }
+
+        input+span {
+            padding-right: 30px;
+        }
+
+        input:invalid+span:after {
+            position: absolute;
+            content: '✖';
+            padding-left: 5px;
+        }
+
+        input:valid+span:after {
+            position: absolute;
+            content: '✓';
+            padding-left: 5px;
+        }
     </style>
 </head>
 
@@ -325,39 +350,99 @@
         </div>
     </div>
     <!-- 第四部份 表單 -->
-    <div class="div3">
-        <form action="#" method="get">
-            <p>
-                <input type="text" maxlength="4" size="10">
-            </p>
+    <div style="display: flex;">
+        <div class="div3">
+            <form action="#" method="get">
+                <p>
+                    <input type="text" value="預設" maxlength="4" size="10">
+                </p>
 
-            <p>
-                <input type="checkbox" value="html" name="A">選項 1
-                <input type="checkbox" value="CSS" name="B" checked>選項 2
-                <input type="checkbox" value="JS" name="C">選項 3
-            </p>
+                <p>
+                    <input type="checkbox" value="html" name="A">選項 1
+                    <input type="checkbox" value="CSS" name="B" checked>選項 2
+                    <input type="checkbox" value="JS" name="C">選項 3
+                </p>
 
-            <p>
-                <input type="radio" value="red" name="A">
-                <input type="radio" value="blue" name="A" checked>
-                <input type="radio" value="green" name="A">
-            </p>
+                <p>
+                    <input type="radio" value="red" name="A">
+                    <input type="radio" value="blue" name="A" checked>
+                    <input type="radio" value="green" name="A">
+                </p>
 
-            <input type="hidden">
+                <p>
+                    accept 指定上傳類型 - 所有圖片檔 + doc檔
+                    <input type="file" accept="image/*,.doc">
+                </p>
 
-            <p>
-                <input type="submit" value="送出">
-                <input type="reset" value="重置">
-            </p>
+                <p>
+                    multiple 同時選多檔案上傳
+                    <input type="file" accept="image/*,.doc" multiple>
+                </p>
 
-            <p>
-                <input type="image" src="img/a1-3.jpg" alt="鞋子" width="200px" height="200px">
-            </p>
+                <div style="border:1px solid black;padding:3px;">
+                    <p>
+                        capture 開手機鏡頭-拍照<br>
+                        <input type="file" accept="image/*" capture><br>
+                        後鏡頭<br>
+                        <input type="file" accept="image/*" capture="environment"><br>
+                        前鏡頭 (自拍)<br>
+                        <input type="file" accept="image/*" capture="user">
+                    <p>
+                        capture 拍影片
+                        <input type="file" accept="video/*" capture>
+                    </p>
+                    <p>
+                        capture 麥克風錄音
+                        <input type="file" accept="audio/*" capture>
+                    </p>
+                    </p>
+                </div>
 
-        </form>
+                <input type="hidden">
+
+                <p>
+                    <input type="submit" value="送出">
+                    <input type="reset" value="重置">
+                </p>
+
+                <p>
+                    <input type="image" src="img/a1-3.jpg" alt="鞋子" width="200px" height="200px">
+                </p>
+
+            </form>
+        </div>
+
+        <div class="div3">
+            <form action="#" method="get">
+                <p>按鈕button : <input type="button" value="click"></p>
+                <p><input disabled> disabled 禁止編輯</p>
+                <p><input readonly> readonly 唯讀</p>
+                <p><input autofocus> autofocus 關注</p>
+                <p><input required> required 欄位必填</p>
+                <p><input autocomplete="on"> autocomplete 自動填入</p>
+                <p>帳號 placeholder : <input placeholder="預設"></p>
+                <p>帳號 password : <input type="password"></p>
+                <p>搜尋 search : <input type="search" name="my"></p>
+                <p>電話 tel : <input type="tel"></p>
+                <p>網址 url : <input type="url"></p>
+                <p>電子信箱 email <input type="email">
+                <p>日期 date : <input type="date" value="2022-03-17" max="2023-03-18" mix="2021-03-16" step="5"></p>
+                <p>時間 time : <input type="time" value="12:00" min="10:00" max="14:00" step=""></p>
+                <p></p>
+                <p></p>
+                <p></p>
+                <p></p>
 
 
+            </form>
 
+            <form>
+                <label for=""> 時間範圍 (opening hours 12:00 to 18:00): </label>
+                <input type="time" min="12:00" max="14:00">
+                <span class="a"></span>
+            </form>
+
+        </div>
     </div>
 </body>
 
