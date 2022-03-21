@@ -37,6 +37,7 @@
             position: relative;
         }
 
+        /* time驗證 */
         input[type="number"] {
             width: 100px;
         }
@@ -60,6 +61,7 @@
 </head>
 
 <body>
+    <!-- 第一部份 -->
     <div style="display: flex">
         <!-- 第一張圖 -->
         <div class="div1" id="top1">
@@ -102,7 +104,8 @@
             </div>
         </div>
     </div>
-    <!-- 響應式圖片 -->
+
+    <!-- 第二部份 響應式圖片 -->
     <div class="div2">
         <div>響應式圖片</div>
         <picture>
@@ -112,8 +115,10 @@
             <img src="./img/7.jpg">
         </picture>
     </div>
-    <!-- 序列 三大值 -->
+    
+    <!-- 第三部份 -->
     <div style="display: flex;">
+        <!-- 序列 三大值 -->
         <div class="div3">
             <p> 半形空格 &ensp; 半形空格</p>
 
@@ -148,9 +153,8 @@
             </ol>
         </div>
 
-
+        <!-- 表格 table -->
         <div class="div3">
-            <!-- 表格 table -->
             <table style="border:1px solid black;margin:20px;" rules="all">
                 <tr>
                     <td>內容1</td>
@@ -428,20 +432,21 @@
                 <p>電子信箱 email <input type="email">
                 <p>日期 date : <input type="date" value="2022-03-17" max="2023-03-18" mix="2021-03-16" step="5"></p>
                 <p>時間 time : <input type="time" value="12:00" min="10:00" max="14:00" step=""></p>
-                <p></p>
-                <p></p>
-                <p></p>
-                <p></p>
 
-
+                <form>
+                    <label for=""> 時間範圍 (opening hours 10:00 to 14:00): </label>
+                    <input type="time" min="10:00" max="14:00" value="12:00">
+                    <span class="a"></span>
+                </form>
+                <p>數字 number : <input type="number" max="100" min="0" step="10"></p>
+                <p>數字 number 小數 : <input type="number" max="100" min="0" step="0.1"></p>
+                <p>滑桿欄位 range : <input type="range" max="10" min="0" step="1" value="1"></p>
+                <p>顏色 color : <input type="color" value="#ff0000"></p>
             </form>
+        </div>
 
-            <form>
-                <label for=""> 時間範圍 (opening hours 12:00 to 18:00): </label>
-                <input type="time" min="12:00" max="14:00">
-                <span class="a"></span>
-            </form>
-
+        <div class="div3">
+            
         </div>
     </div>
 </body>
